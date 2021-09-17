@@ -9,7 +9,8 @@
     "build": "tsc && vite build",
     "serve": "vite preview",
     "test": "jest",
-    "lint": "eslint src --max-warnings=0",
+    "lint": "eslint --max-warnings=0 --ignore-path .gitignore --ext .js,.jsx,.ts,.tsx .",
+    "lint:fix": "npm run lint -- --fix",
     "prettier": "prettier --ignore-path .gitignore \"**/*.{js,json,ts,tsx,scss,css}\"",
     "format": "npm run prettier -- --write",
     "check:format": "npm run prettier -- --list-different"
@@ -41,6 +42,7 @@
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
     "eslint-plugin-tailwindcss": "^1.14.1",
     "jest": "^27.0.6",
     "postcss": "^8.3.5",
